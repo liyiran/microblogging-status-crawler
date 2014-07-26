@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+	version="1.0">
+	<description>JPA Mapping file for Status with JPA</description>
+	<package>com.kudtu.entity</package>
+
+	<entity class="com.kudtu.entity.User" name="User">
+		<table name="Users" />
+		<attributes>
+			<basic name="id">
+				<column name="ID" length="10" />
+			</basic>
+			<basic name="screenName">
+				<column name="SCREEN_NAME" length="100" />
+			</basic>
+			<basic name="statusCount">
+				<column name="STATUS_COUNT" length="10" />
+			</basic>
+			<basic name="followingsCount">
+				<column name="FOLLOWINGS_COUNT" length="10" />
+			</basic>
+			<basic name="followersCount">
+				<column name="FOLLOWERS_COUNT" length="10" />
+			</basic>
+			<basic name="favoritesCount">
+				<column name="FAVORITES_COUNT" length="10" />
+			</basic>
+			<basic name="isVerified">
+				<column name="IS_VERIFIED" length="1" />
+			</basic>
+			<basic name="description">
+				<column name="DESCRIPTION" length="200" />
+			</basic>
+			<basic name="profileImageUrl">
+				<column name="PROFILE_IMAGE_URL" length="200" />
+			</basic>
+			<basic name="createdAt">
+				<column name="CREATEDAT" length="200" />
+			</basic>
+		</attributes>
+	</entity>
+
+	<entity class="com.kudtu.entity.Status" name="Status">
+		<table name="Statuses" />
+		<attributes>
+			<basic name="id">
+				<column name="ID" length="10" />
+			</basic>
+			<basic name="favoriteCount">
+				<column name="FAVORITE_COUNT" length="10" />
+			</basic>
+			<basic name="retweetCount">
+				<column name="RETWEET_COUNT" length="10" />
+			</basic>
+			<basic name="commentCount">
+				<column name="COMMENT_COUNT" length="10" />
+			</basic>
+			<basic name="text">
+				<column name="TEXT" length="200" />
+			</basic>
+			<basic name="extendedMediaEntitiesCount">
+				<column name="EXTENDED_MEDIA_ENTITIES_COUNT" length="10" />
+			</basic>
+			<basic name="urlEntitiesCount">
+				<column name="URL_ENTITIES_COUNT" length="10" />
+			</basic>
+			<basic name="hashtagEntitiesCount">
+				<column name="HASHTAG_ENTITIES_COUNT" length="10" />
+			</basic>
+			<basic name="userMentionEntitiesCount">
+				<column name="USER_MENTION_ENTITIES_COUNT" length="10" />
+			</basic>
+			<basic name="createdAt">
+				<column name="CREATEDAT" length="200" />
+			</basic>
+			<basic name="users_id">
+				<column name="USERS_ID" length="10" />
+			</basic>
+		</attributes>
+	</entity>
+
+</entity-mappings>
