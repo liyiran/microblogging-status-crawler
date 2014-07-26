@@ -1,17 +1,14 @@
 tutorial
 ========
 
-Simple demonstration of using JPA with DataNucleus.
-You can run this with any supported datastore by simply editing the following files :-
+Microblogging statsu crawler, applying to Weibo and Twitter platform
+Weibo: implemented by crawler4j
+Twitter: dummy crawler, implmented by Twitter API
 
-* <a href="https://github.com/datanucleus/samples-jpa/blob/master/tutorial/src/main/resources/META-INF/persistence.xml">src/main/resources/META-INF/persistence.xml</a>   **[Edit the datastore details here]**
-* <a href="https://github.com/datanucleus/samples-jpa/blob/master/tutorial/pom.xml">pom.xml</a>   **[Edit the dependency jars for your datastore]**
-
-__Choosing to NOT invoke the tutorial using the following methods means that you ignore our advice and any problem is yours__.
-
-
-Maven Instructions
+Persistent Layer Instructions
 ==================
+0. Chagne pom file to conform to underlying database.
+
 1. Run the command *mvn clean compile*. This builds everything and enhances the classes.
 
 2. Run the command *mvn datanucleus:schema-create*. This creates the schema for the tutorial.
@@ -19,17 +16,3 @@ Maven Instructions
 3. Run the command *mvn exec:java*. This runs the tutorial.
 
 4. Run the command *mvn datanucleus:schema-delete*. This deletes the schema for the tutorial
-
-
-Ant instructions
-================
-1. Create a directory **lib** and add the following jars to it : 
-   persistence-api.jar (e.g geronimo-specs geronimo_jpa_2.0_spec), datanucleus-core.jar, datanucleus-api-jpa.jar, datanucleus-{store}.jar, log4j.jar, {your-database-driver}.jar
-
-2. Run the command *ant clean compile enhance*. This builds everything and enhances the classes
-
-3. Run the command *ant createschema*. This creates the schema for the tutorial.
-
-4. Run the command *ant runtutorial*. This runs the tutorial.
-
-5. Run the command *ant deleteschema*. This deletes the schema for the tutorial.
